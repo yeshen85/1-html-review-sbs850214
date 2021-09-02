@@ -1,14 +1,13 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <link href="style.css" rel="stylesheet" type="text/css" />
-    <title>Hello, world!</title>
+    <title>Home Page</title>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -87,32 +86,34 @@
     </table>
     <br>
     <form>
-        <h1>Add Book's Information</h1>
+        <h1>Add New Book's Information</h1>
         <div class="mb-3">
           <label for="input_title" class="form-label">Title</label>
-          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          <input type="text" class="form-control" id="input_title" aria-describedby="emailHelp">
         </div>
         <div class="mb-3">
           <label for="title_author" class="form-label">Authors</label>
-          <input type="text" class="form-control" id="exampleInputPassword1">
+          <input type="text" class="form-control" id="title_author">
         </div>
         <div class="mb-3">
             <label for="input_year_publish" class="form-label">Year Published</label>
-            <input type="text" class="form-control" id="exampleInputPassword1">
+            <input type="text" class="form-control" id="input_year_publish">
           </div>
           <div class="mb-3">
             <label for="input_publisher" class="form-label">Publisher</label>
-            <input type="text" class="form-control" id="exampleInputPassword1">
+            <input type="text" class="form-control" id="input_publisher">
           </div>
           <div class="mb-3">
             <label for="input_page_count" class="form-label">Page Count</label>
-            <input type="text" class="form-control" id="exampleInputPassword1">
+            <input type="number" class="form-control" id="input_page_count">
           </div>
           <div class="mb-3">
             <label for="input_msrp" class="form-label">MSRP</label>
-            <input type="text" class="form-control" id="exampleInputPassword1">
+            <input type="number" class="form-control" id="input_msrp">
           </div>
         <button type="submit" class="btn btn-primary">Submit</button>
+        <br>
+        <br>
       </form>
   </body>
 </html>
