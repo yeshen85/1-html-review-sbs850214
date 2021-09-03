@@ -3,7 +3,6 @@
     background-color: #69899f;
    
     border-color: #425766;
-   
   }
 
 .userinfo_page{
@@ -32,3 +31,21 @@ p{
     background: greenyellow;
 }
 
+h3{
+    text-align: center;
+}
+
+.img_burger{
+    width: 300px;
+    margin-left: 700px;
+}
+
+.img_travel{
+    width: 300px;
+    margin-left: 700px;
+}
+
+cite{
+    font-size: 10px;
+    text-align: right;
+}
