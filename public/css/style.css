@@ -5,6 +5,15 @@
     border-color: #425766;
   }
 
+.home_pic{
+    width: 500px;
+    margin-left: 650px;
+}
+
+.home_title{
+    text-align: center;
+}
+
 .userinfo_page{
     text-align: center;
 }
