@@ -7,10 +7,13 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+    <script>dayjs().format()</script>
     </script>
     <title>Home Page</title>
   </head>
-  <body>
+  <body id="offerApp">
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -31,16 +34,17 @@
           </div>
         </div>
       </nav>
-    <h1 class="userinfo_page">Personal Information</h1>
+    <h1  class="userinfo_page">Personal Information</h1>
     <div class="usr_img">
-    <img src="img/Bananaman.jpg" alt="bananaman" style="vertical-align:middle">
+    <img v-bind:src="person.picture.large" alt="Picture" style="vertical-align:middle">
+    
     </div>
-    <p>Name: Banana Man</p>
-    <p>Country: Taiwan</p>
-    <p>Birthday: January 1st 1996</p>
-    <p>Age: 25</p>
-    <p>Email:</p> <div class="usr_email"><a href="mailto:bananaman@fruit.com">bananaman@fruit.com</a></div>
-
+    <p>Name : {{ person.name.first }} {{ person.name.last }}</p>
+    <p>Country : {{ person.location.country }}</p>
+    <p>Birth date : {{ prettyDate }}</p>
+    <p>Age : {{ person.registered.age }}</p>
+    <p><label>Email: </label>
+       <a href="mailto:'+person.email" target="_blank">{{ person.email }}</a></p>
     <h3>Interests</h3>
     <div class="col-md-6">
     <a href="https://www.cookinglight.com/healthy-living/weight-loss/how-to-eat-less"><img src="img/eatburger.jpg" alt="eatburger" class="img_burger  img-thumbnail"></a>
@@ -52,6 +56,6 @@
     </div>
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
-
+    <script src="js/index.js"></script>
   </body>
 </html>
