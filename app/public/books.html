@@ -21,9 +21,9 @@
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="index.html">Home</a>
               </li>
-              <li class="nav-item">
+              <!-- <li class="nav-item">
                 <a class="nav-link" href="userinfo.html">User Information</a>
-              </li>
+              </li> -->
               <li class="nav-item">
                 <a class="nav-link" href="books.html">Books Information</a>
               </li>
@@ -47,13 +47,13 @@
               </tr>
             </thead>
             <tbody>
-              <tr v-for="book in books">
-                <th scope="row">{{ book.title }}</th>
-                <td>{{ book.authors }}</td>
-                <td>{{ book.publishyr }}</td>
-                <td>{{ book.publisher }}</td>
-                <td>{{ book.pagesum }}</td>
-                <td>{{ book.MSRP }}</td>
+              <tr v-for="b in books">
+                <th scope="row">{{ b.title }}</th>
+                <td>{{ b.authors }}</td>
+                <td>{{ b.publishyr }}</td>
+                <td>{{ b.publisher }}</td>
+                <td>{{ b.pagesum }}</td>
+                <td>{{ prettyDollar(b.MSRP) }}</td>
               </tr>
             </tbody>
         </table>

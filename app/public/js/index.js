@@ -4,12 +4,7 @@ const SomeApp = {
         books: [],
       }
     },
-    computed: {
-        prettyDate() {
-            return dayjs(this.person.dob.date)
-            .format('D MMM YYYY')
-        }
-    },
+    computed: {},
     methods: {
     
         prettyDollar(n) {
@@ -21,7 +16,7 @@ const SomeApp = {
             .then( response => response.json() )
             .then( (responseJson) => {
                 console.log(responseJson);
-                this.book = responseJson;
+                this.books = responseJson;
             })
             .catch( (err) => {
                 console.error(err);

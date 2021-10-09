@@ -3,11 +3,11 @@ DROP TABLE IF EXISTS books;
 CREATE TABLE books (
 	id int PRIMARY KEY AUTO_INCREMENT ,
     title varchar(48),
-    authors varchar(48),
+    authors varchar(24),
     publishyr int NOT NULL,
-    publisher varchar(48),
+    publisher varchar(24),
     pagesum int NOT NULL,
-    MSRP varchar(48) NOT NULL
+    MSRP varchar(24) NOT NULL
 );
 
 INSERT INTO books (id, title, authors, publishyr, publisher, pagesum, MSRP) VALUES 
