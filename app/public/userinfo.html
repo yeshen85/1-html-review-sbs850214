@@ -39,10 +39,15 @@
     <img v-bind:src="person.picture.large" alt="Picture" style="vertical-align:middle">
     
     </div>
+    <!-- <div v-if="person"> -->
+    <form class="reload_btn" v-on:submit.prevent="fetchUserData">
+      <button type="submit">Reload</button>
+    </form>
     <p>Name : {{ person.name.first }} {{ person.name.last }}</p>
     <p>Country : {{ person.location.country }}</p>
     <p>Birth date : {{ prettyDate }}</p>
     <p>Age : {{ person.registered.age }}</p>
+    <!-- </div> -->
     <p><label>Email: </label>
        <a href="mailto:'+person.email" target="_blank">{{ person.email }}</a></p>
     <h3>Interests</h3>

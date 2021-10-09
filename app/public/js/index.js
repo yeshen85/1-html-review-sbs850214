@@ -1,8 +1,8 @@
-const Offer = {
+const SomeApp = {
     data() {
       return {
-        "person": {},
-        }
+        books: [],
+      }
     },
     computed: {
         prettyDate() {
@@ -11,8 +11,23 @@ const Offer = {
         }
     },
     methods: {
+    
+        prettyDollar(n) {
+            const d = new Intl.NumberFormat("en-US").format(n);
+            return "$ " + d;
+        },
+        fetchBookData() {
+            fetch('/api/books/')
+            .then( response => response.json() )
+            .then( (responseJson) => {
+                console.log(responseJson);
+                this.book = responseJson;
+            })
+            .catch( (err) => {
+                console.error(err);
+            })
+        },
         fetchUserData(){
-            console.log("A");
             fetch('https://randomuser.me/api/')
             .then( response => response.json() )
             .then( (responseJson) => {
@@ -27,6 +42,7 @@ const Offer = {
     },
     created() {
         this.fetchUserData();
-    } //end created
-} // end Offer config
-Vue.createApp(Offer).mount('#offerApp');
+        this.fetchBookData();
+    } 
+}
+Vue.createApp(SomeApp).mount('#offerApp');
