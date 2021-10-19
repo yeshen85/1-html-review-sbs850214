@@ -59,31 +59,31 @@
         </table>
       </div>
     <br>
-    <form>
+    <form v-on:submit.prevent="postNewBook">
         <h1 class="addbook_title">Add New Book's Information</h1>
         <div class="mb-3">
           <label for="input_title" class="form-label">Title</label>
-          <input type="text" class="form-control" id="input_title" aria-describedby="emailHelp">
+          <input type="text" v-model="bookForm.title" class="form-control" id="input_title" aria-describedby="emailHelp">
         </div>
         <div class="mb-3">
           <label for="title_author" class="form-label">Authors</label>
-          <input type="text" class="form-control" id="title_author">
+          <input type="text" v-model="bookForm.authors" class="form-control" id="title_author">
         </div>
         <div class="mb-3">
             <label for="input_year_publish" class="form-label">Year Published</label>
-            <input type="text" class="form-control" id="input_year_publish">
+            <input type="text" v-model="bookForm.publishyr" class="form-control" id="input_year_publish">
           </div>
           <div class="mb-3">
             <label for="input_publisher" class="form-label">Publisher</label>
-            <input type="text" class="form-control" id="input_publisher">
+            <input type="text" v-model="bookForm.publisher" class="form-control" id="input_publisher">
           </div>
           <div class="mb-3">
             <label for="input_page_count" class="form-label">Page Count</label>
-            <input type="number" class="form-control" id="input_page_count">
+            <input type="number" v-model="bookForm.pagesum" class="form-control" id="input_page_count">
           </div>
           <div class="mb-3">
             <label for="input_msrp" class="form-label">MSRP</label>
-            <input type="number" class="form-control" id="input_msrp">
+            <input type="number" v-model="bookForm.MSRP" class="form-control" id="input_msrp">
           </div>
         <button type="submit" class="btn btn-primary">Submit</button>
         <br>
