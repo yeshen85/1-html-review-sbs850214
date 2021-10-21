@@ -45,6 +45,7 @@ const SomeApp = {
               })
               .then( response => {
                 this.fetchBookData();
+                this.bookForm = {};
               })
 
           },
